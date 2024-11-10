@@ -48,8 +48,10 @@ export const signup = async (req, res) => {
 
       imageUrl = result.secure_url;
     }
-    //console.log("bb"+imageUrl);
-    // Create new user
+    else{
+      imageUrl = "https://res.cloudinary.com/dlrjqxzhs/image/upload/v1725959461/user_images/s6modaxdti3hluem8bvy.jpg"
+    }
+   
     const newUser = new User({
       fullname,
       email,

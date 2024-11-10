@@ -19,7 +19,7 @@ const userSchema = mongoose.Schema({
     },
     imageurl:{
         type: String,
-        default: 'https://res.cloudinary.com/dlrjqxzhs/image/upload/v1725959461/user_images/s6modaxdti3hluem8bvy.jpg'
+       
     }
 }, { timestamps: true }); // createdAt & updatedAt
 

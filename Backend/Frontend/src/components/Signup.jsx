@@ -127,14 +127,10 @@ function Signup() {
         <label className="input input-bordered flex items-center gap-2">
           <input
             type="file"
-            {...register("image", { required: true })}
+            {...register("image")}
           />
         </label>
-        {errors.image && (
-          <span className="text-red-500 text-sm font-semibold">
-            Please upload an image
-          </span>
-        )}
+        
 
         <div className="flex justify-center">
           <input

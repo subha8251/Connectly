@@ -19,7 +19,6 @@ const userSchema = mongoose.Schema({
     },
     imageurl:{
         type: String,
-       
     }
 }, { timestamps: true }); // createdAt & updatedAt
 

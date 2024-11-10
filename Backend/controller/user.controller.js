@@ -3,16 +3,19 @@ import bcrypt from "bcryptjs";
 import createTokenAndSaveCookie from "../jwt/generateToken.js";
 import cloudinary from 'cloudinary';
 import multer from 'multer';
+import dotenv from "dotenv";
+dotenv.config();
 
 // Configure Multer storage
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
+
 // Configure Cloudinary
 cloudinary.v2.config({
-  cloud_name: 'dlrjqxzhs',
-  api_key: '796379156913999',
-  api_secret: '3tSdLsV-Leb08a19T5LzEnFbXvc',
+  cloud_name: 'process.env.CLOUDINARY_CLOUD_NAME',
+  api_key: 'process.env.CLOUDINARY_API_KEY',
+  api_secret: 'process.env.CLOUDINARY_API_SECRET',
 });
 
 export const signup = async (req, res) => {
